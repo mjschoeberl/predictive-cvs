@@ -65,8 +65,8 @@ python main.py --dataset ma_200 --epoch 8000 --batch_size 64 --z_dim 2 --seed 32
 The runs are saved at `./results/<dataset>/<date>/.`.
 The predicted trajectory is stored in a *.txt file named `samples_aevb_<dataset>_z_<dim>_<batch-size>_<max-epoch>.txt`.
 Aforementioned command produces 500 samples of the decoding network parameters
-$\boldsymbol{\theta} \sim p(\boldsymbol{\theta}|\boldsymbol{X})$.
-For each $\boldsymbol{\theta}_i$ 1000 samples $\boldsymbol{x} \sim p(\boldsymbol{x}|\boldsymbol{\theta}_i)$ are predicted.
+<img src="http://latex.codecogs.com/svg.latex?\boldsymbol{\theta}_i\sim\%20p(\boldsymbol{\theta}|\boldsymbol{X})" border="0"/>.
+For each <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{\theta}_i" border="0"/>, 1000 samples <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{x}\sim%20p(\boldsymbol{x}|\boldsymbol{\theta}_{\text{i}})" border="0"/> are predicted.
 
 ## Citation
 
