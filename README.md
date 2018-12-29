@@ -54,7 +54,7 @@ The predicted trajectory is stored in a *.txt file named `samples_aevb_<dataset>
 Aforementioned command produces 1000 samples 
 <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{x}\sim%20p(\boldsymbol{x}|\boldsymbol{\theta}_{\text{MAP}})" border="2"/>.
 
-### Uncertainty Quantification
+### Uncertainty Quantification with the approximate posterior <img src="http://latex.codecogs.com/svg.latex?p(\boldsymbol{\theta}|\boldsymbol{X})" border="1"/>
 
 Train the model and obtain a MAP estimate of the predicted trajectory and calculate the approximate posterior distribution
 of the decoding network parameters.
