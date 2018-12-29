@@ -52,8 +52,7 @@ python main.py --dataset ma_200 --epoch 8000 --batch_size 64 --z_dim 2 --seed 32
 The runs are saved at `./results/<dataset>/<date>/.`.
 The predicted trajectory is stored in a *.txt file named `samples_aevb_<dataset>_z_<dim>_<batch-size>_<max-epoch>.txt`.
 Aforementioned command produces 1000 samples 
-<img src="https://latex.codecogs.com/svg.latex?\boldsymbol{x} \sim p(\boldsymbol{x}|\boldsymbol{\theta}_{\text{MAP}})" title="\boldsymbol{x} \sim p(\boldsymbol{x}|\boldsymbol{\theta}_{\text{MAP}})" />
-<img src="http://latex.codecogs.com/svg.latex?\boldsymbol{x} \sim p(\boldsymbol{x}|\boldsymbol{\theta}_{\text{MAP}})" border="0"/>
+<img src="http://latex.codecogs.com/svg.latex?\boldsymbol{x}\simp(\boldsymbol{x}|\boldsymbol{\theta}_{\text{MAP}})" border="0"/>
 $\boldsymbol{x} \sim p(\boldsymbol{x})$.
 
 ### Uncertainty Quantification
