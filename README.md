@@ -12,7 +12,7 @@ all-atom system. Predicted properties are augmented by confidence intervals acco
 unavoidably occurs due to limited data.
 
 ## Dependencies
-- Python 2
+- Python 2.7.9
 - PyTorch 0.3.0
 - Scipy
 - Matplotlib
