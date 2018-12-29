@@ -70,7 +70,7 @@ For each <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{\theta}_i" bo
 
 ## Citation
 
-If you find this repo useful for your research, please consider to cite:
+Please consider to cite the following work:
 ```latex
 @article{schoeberl2018,
 title = "Predictive Collective Variable Discovery with Deep Bayesian Models",
