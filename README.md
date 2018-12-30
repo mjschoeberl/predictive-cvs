@@ -1,15 +1,12 @@
-# Predictive Collective Variable Discovery
-
-[Predictive Collective Variable Discovery with Deep Bayesian Models](https://arxiv.org/abs/1809.06913)
+# Predictive Collective Variable Discovery with Deep Bayesian Models
 
 Markus Schöberl, [Nicholas Zabaras](https://www.zabaras.com), [Phaedon-Stelios Koutsourelakis](http://www.contmech.mw.tum.de)
 
 Python/PyTorch implementation of the discovery of collective variables (CV) in atomistic systems.
-The discovered CVs (e.g. for ALA-2 and ALA-15 peptides) are related to physicochemical properties
-which are essential for understanding mechanisms especially in unexplored complex systems.
-The CVs are *predictive* and are facilitated for the efficient calculation properties considering the
-all-atom system. Predicted properties are augmented by confidence intervals accounting for epistemic uncertainty which
-unavoidably occurs due to limited data.
+Extending spatio-temporal scale limitations of models for complex atomistic systems considered in biochemistry and materials science necessitates the development of enhanced sampling methods. The potential acceleration in exploring the configurational space by enhanced sampling methods depends on the choice of collective variables (CVs). This software implements the discovery of CVs as a Bayesian inference problem and considers CVs as hidden generators of the full-atomistic trajectory. The ability to generate samples of the fine-scale atomistic configurations using limited training data allows to compute estimates of observables as well as our probabilistic confidence on them. The formulation is based on emerging methodological advances in machine learning and variational inference. The discovered CVs are related to physicochemical properties which are essential for understanding mechanisms especially in unexplored complex systems. We provide a quantitative assessment of the CVs in terms of their predictive ability for alanine dipeptide (ALA-2) and ALA-15 peptide.
+
+This code was utilized for the following publication: [Predictive Collective Variable Discovery with Deep Bayesian Models](https://arxiv.org/abs/1809.06913).
+
 
 ## Dependencies
 - Python 2.7.9
@@ -21,19 +18,15 @@ unavoidably occurs due to limited data.
 
 ## Installation
 - Install PyTorch and other dependencies
-
 - Clone this repo:
 ```
 git clone https://github.com/mjschoeberl/predictive-cvs.git
 cd predictive-cvs
 ```
 
-
 ## Dataset
-The dataset for ALA-2 and ALA-15 are contained in the subfolder `./data_peptide/ala-2/.` and `./data_peptide/ala-15/.`,
-respectively. In both cases scripts of the molecular dynamic (MD) simulation leading to the reference trajectory can be found
-in both cases in the subfolder `gromacs`. `Gromacs 4.6.7` has been used. For further information regarding MD simulations
-it is refered to (http://www.gromacs.org).
+The datasets for ALA-2 and ALA-15 are located in the subfolder `./data_peptide/ala-2/.` and `./data_peptide/ala-15/.`,
+respectively. In both cases, scripts for running the original molecular dynamic (MD) simulation leading to the reference trajectory are placed in the subfolder `./data_peptide/<peptide-name>/gromacs/.`. `Gromacs 4.6.7` has been used. For further information regarding MD simulations it is refered to (http://www.gromacs.org).
 
 ### ALA-2
 For alanine dipeptide, we provide prepared datasets with N=[50,100,200,500] samples as used in the corresponding publication.
