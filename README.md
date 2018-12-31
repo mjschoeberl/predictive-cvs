@@ -81,3 +81,7 @@ author = "Markus Sch{\"o}berl and Nicholas Zabaras and Phaedon-Stelios Koutsoure
 ## Acknowledgments
 
 The code is inspired by the implementation of Kingma and Welling in [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114).
+
+## Questions
+
+Please feel free to contact Markus Schöberl (mschoeberl@gmail.com) for questions and comments.
