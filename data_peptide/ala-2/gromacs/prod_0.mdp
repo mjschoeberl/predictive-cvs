@@ -1,0 +1,39 @@
+#################################### INPUT ####################################
+;ld_seed     = RAND      ; Use random seed from WESTPA
+################################# INTEGRATOR ##################################
+integrator  = sd        ; Langevin thermostat
+dt          = 0.001     ; Timestep (ps)
+nsteps      = 1000000000    ;25000000   ; Simulation duration (timesteps)
+nstcomm     = 250       ; Center of mass motion removal interval
+comm_mode   = ANGULAR   ;linear    ; Center of mass motion removal mode (angular: also rotation removed)
+################################## ENSEMBLE ###################################
+ref_t       = 330.0      ; System temperature (K)
+tcoupl      = andersen
+tau_t       = 2.0       ; Thermostat time constant (ps)
+tc_grps     = system    ; Apply thermostat to complete system
+############################## IMPLICIT SOLVENT ###############################
+implicit_solvent = GBSA ; Generalized Born implicit solvent
+gb_algorithm     = HCT  ; Hawkins-Cramer-Truhlar radii calculation
+rgbradii         = 0.0  ; Cutoff for Born radii calculation (A)
+########################### NONBONDED INTERACTIONS ############################
+cutoff_scheme = group   ; Method of managing neighbor lists
+pbc           = no      ; Periodic boundary conditions disabled
+coulombtype   = cut-off ; Calculate coulomb interactions using cutoff
+rcoulomb      = 0.0     ; Coulomb cutoff of infinity
+vdw_type      = cut-off ; Calculate van der Waals interactions using cutoff
+rvdw          = 0.0     ; Van der Waals cutoff of infinity
+rlist         = 0.0     ; Neighbor list cutoff
+nstlist       = 0       ; Do not update neighbor list
+################################### OUTPUT ####################################
+nstlog        = 500     ; Log output interval (timesteps)
+nstenergy     = 500     ; Energy output interval (timesteps)
+nstcalcenergy = 500     ; Energy calculation interval (timesteps)
+nstxout       = 500     ; Trajectory output interval (timesteps)
+nstvout       = 500     ; Velocity outout interval (timesteps)
+nstfout       = 500     ; Force output interval (timesteps)
+
+constraints           = h-bonds
+constraint-algorithm  = lincs
+lincs-iter  = 2
+unconstrained-start   = no   ; Do not constrain the start configuration
+;shake_tol             = 0.0001

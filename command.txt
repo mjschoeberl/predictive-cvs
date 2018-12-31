@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python main.py --dataset ma_200 --epoch 8000 --batch_size 64 --z_dim 2 --samples_pred 1000 --ard 1.0e-5
