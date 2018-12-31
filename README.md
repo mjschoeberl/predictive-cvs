@@ -18,8 +18,8 @@ Results of the following publication are based on this implementation: [Predicti
 
 
 ## Installation
-- Install PyTorch and other dependencies
-- Clone this repo:
+- Install PyTorch and other dependencies.
+- Clone this repo with:
 ```
 git clone https://github.com/mjschoeberl/predictive-cvs.git
 cd predictive-cvs
