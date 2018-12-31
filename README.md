@@ -18,8 +18,8 @@ Results of the following publication are based on this implementation: [Predicti
 
 
 ## Installation
-- Install PyTorch and other dependencies
-- Clone this repo:
+- Install PyTorch and other dependencies.
+- Clone this repo with:
 ```
 git clone https://github.com/mjschoeberl/predictive-cvs.git
 cd predictive-cvs
@@ -27,11 +27,11 @@ cd predictive-cvs
 
 
 ## Dataset
-The datasets for ALA-2 and ALA-15 are located in the subfolder `./data_peptide/ala-2/.` and `./data_peptide/ala-15/.`,
-respectively. In both cases, scripts for running the original molecular dynamic (MD) simulation leading to the reference trajectory are placed in the subfolder `./data_peptide/<peptide-name>/gromacs/.`. `Gromacs 5.0.4` has been used. For further information regarding MD simulations, it is referred to http://www.gromacs.org.
+The datasets for ALA-2 and ALA-15 are located in the subfolders `./data_peptide/ala-2/.` and `./data_peptide/ala-15/.`,
+respectively. In both cases, scripts for running the original molecular dynamic (MD) simulation leading to the reference trajectory are placed in `./data_peptide/<peptide-name>/gromacs/.`. `Gromacs 5.0.4` has been used for performing the MD simulations. For further details regarding MD simulations, please see http://www.gromacs.org.
 
 ### ALA-2
-For alanine dipeptide, we provide prepared datasets with N=[50, 100, 200, 500] samples as used in the corresponding publication.
+For alanine dipeptide, prepared datasets with N=[50, 100, 200, 500] samples as used in the corresponding publication are provided.
 
 ### ALA-15
 For alanine 15 peptide, we provide datasets with N=[300, 1500, 3000, 5000].
@@ -47,7 +47,7 @@ python main.py --dataset ma_200 --epoch 8000 --batch_size 64 --z_dim 2 --samples
 ```
 Files written during training and the predicted trajectory are stored in `./results/<dataset>/<date_time>/.`.
 The file `samples_aevb_<dataset>_z_<dim>_<batch-size>_<max-epoch>.txt` contains samples <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{x}\sim%20p(\boldsymbol{x}|\boldsymbol{\theta}_{\text{MAP}})" border="2"/> where each column represents one sample <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{x}_i" border="2">.
-Aforementioned command produces 1000 samples <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{x}\sim%20p(\boldsymbol{x}|\boldsymbol{\theta}_{\text{MAP}})" border="2"/>.
+Aforementioned command produces 1000 samples <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{x}\sim%20p(\boldsymbol{x}|\boldsymbol{\theta}_{\text{MAP}})" border="2"/>. This is adjusted by setting `--samples_pred`.
 
 ### Uncertainty quantification utilizing approximate posterior inference
 
@@ -56,9 +56,9 @@ The following command trains the model and produces a MAP estimate of the predic
 python main.py --dataset ma_200 --epoch 8000 --batch_size 64 --z_dim 2 --samples_pred 1000 --ard 1.0e-5 
 --npostS 500
 ```
-This comman trains the model parametrization and produces a MAP estimate stored as `samples_aevb_<dataset>_z_<dim>_<batch-size>_<max-epoch>.txt`, using <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{\theta}_{\text{MAP}}" border="1"/>. In addition, the posterior <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{\theta}_i\sim\%20p(\boldsymbol{\theta}|\boldsymbol{X})" border="2"/> is estimated by Laplace's approximation.
-Aforementioned command produces 500 samples of the decoding network parameters
-<img src="http://latex.codecogs.com/svg.latex?\boldsymbol{\theta}_i\sim\%20p(\boldsymbol{\theta}|\boldsymbol{X})" border="2"/>. One controls the amount of produced posterior samples by changing `--npostS 500`.
+This command trains the model parametrization and produces a MAP estimate stored as `samples_aevb_<dataset>_z_<dim>_<batch-size>_<max-epoch>.txt`, using <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{\theta}_{\text{MAP}}" border="1"/>. In addition, the posterior <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{\theta}_i\sim\%20p(\boldsymbol{\theta}|\boldsymbol{X})" border="2"/> is estimated by employing Laplace's approximation.
+The aforementioned command produces 500 posterior samples of the decoding network parameters
+<img src="http://latex.codecogs.com/svg.latex?\boldsymbol{\theta}_i\sim\%20p(\boldsymbol{\theta}|\boldsymbol{X})" border="2"/>. One is able to control the amount of produced posterior samples by changing `--npostS 500`.
 For each <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{\theta}_i" border="2"/>, 1000 samples (`--samples_pred 1000`) <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{x}\sim%20p(\boldsymbol{x}|\boldsymbol{\theta}_{\text{i}})" border="2"/> are predicted.
 
 ## Citation
@@ -74,10 +74,14 @@ year = "",
 issn = "",
 doi = "",
 url = "",
-author = "Markus Sch{\"{o}}berl, and Nicholas Zabaras and Phaedon-Stelios Koutsourelakis"
+author = "Markus Sch{\"o}berl and Nicholas Zabaras and Phaedon-Stelios Koutsourelakis"
 }
 ```
 
 ## Acknowledgments
 
 The code is inspired by the implementation of Kingma and Welling in [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114).
+
+## Questions
+
+Please feel free to contact Markus Schöberl (mschoeberl@gmail.com) for questions and comments.
