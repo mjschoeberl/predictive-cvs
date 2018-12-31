@@ -28,7 +28,7 @@ cd predictive-cvs
 
 ## Dataset
 The datasets for ALA-2 and ALA-15 are located in the subfolder `./data_peptide/ala-2/.` and `./data_peptide/ala-15/.`,
-respectively. In both cases, scripts for running the original molecular dynamic (MD) simulation leading to the reference trajectory are placed in the subfolder `./data_peptide/<peptide-name>/gromacs/.`. `Gromacs 4.6.7` has been used. For further information regarding MD simulations, it is referred to http://www.gromacs.org.
+respectively. In both cases, scripts for running the original molecular dynamic (MD) simulation leading to the reference trajectory are placed in the subfolder `./data_peptide/<peptide-name>/gromacs/.`. `Gromacs 5.0.4` has been used. For further information regarding MD simulations, it is referred to http://www.gromacs.org.
 
 ### ALA-2
 For alanine dipeptide, we provide prepared datasets with N=[50, 100, 200, 500] samples as used in the corresponding publication.
