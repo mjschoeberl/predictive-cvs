@@ -74,7 +74,7 @@ year = "",
 issn = "",
 doi = "",
 url = "",
-author = "Markus Sch{\"{o}}berl, and Nicholas Zabaras and Phaedon-Stelios Koutsourelakis"
+author = "Markus Sch{\"o}berl and Nicholas Zabaras and Phaedon-Stelios Koutsourelakis"
 }
 ```
 
