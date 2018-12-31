@@ -51,7 +51,7 @@ def parse_args():
                         help='The type of model to be trained.')
     parser.add_argument('--dataset', type=str, default='mnist',
                         choices=get_choices(),
-                        help='The name of dataset. For **paper**, ma_* for ALA2 and m_*_ala_15 for ALA15 works.')
+                        help='The name of dataset. For PCVs, ma_* for ALA2 and m_*_ala_15 for ALA15 works.')
     parser.add_argument('--epoch', type=int, default=2000, help='The number of epochs to run.')
     parser.add_argument('--batch_size', type=int, default=16, help='The size of batch')
     parser.add_argument('--save_dir', type=str, default='models',
@@ -72,7 +72,7 @@ def parse_args():
     parser.add_argument('--z_dim', type=int, default=2)
     parser.add_argument('--samples_pred', type=int, default=4000)
     parser.add_argument('--useangulardat', type=str, default='no',
-                        choices=['no', 'ang', 'ang_augmented', 'ang_auggrouped'], help='Irrelevant for **paper** since not applied.')
+                        choices=['no', 'ang', 'ang_augmented', 'ang_auggrouped'], help='Irrelevant for PCVs since not applied.')
     parser.add_argument('--seed', type=int, default=3251,
                     help='random seed (default: 0), 0 for no seed.')
     parser.add_argument('--AEVB', type=int, default=1,
@@ -95,15 +95,15 @@ def parse_args():
     parser.add_argument('--ard', type=float, default=0., help='Value of a0 for ARD prior. If 0. then no ARD prior is applyed.')
     parser.add_argument('--exactlikeli', type=int, default=0, help='Perform leveraging the likelihood.')
     parser.add_argument('--outputfreq', type=int, default=500, help='Output frequency during the optimization process.')
-    parser.add_argument('--x_dim', type=int, default=2, help='Just for variational approach - not for **paper** since not applied. Test to predict gaussian of dim x_dim.')
+    parser.add_argument('--x_dim', type=int, default=2, help='Just for variational approach - not for PCVs since not applied. Test to predict gaussian of dim x_dim.')
     parser.add_argument('--assignrandW', type=int, default=0,
                         help='Just for variational approach. Assign uniformly random variables to reference W.')
     parser.add_argument('--freeMemory', type=int, default=0,
                         help='Just for variational approach. Free memory during estimation of the loss function.')
-    parser.add_argument('--stepSched', type=int, default=1, help='Use step scheduler module druing optimization. No effect for **paper** since not applied.')
-    parser.add_argument('--betaVAE', type=float, default=1., help='Beta value for enforcing beta * KL(q(z|x) || p(z)). See https://openreview.net/pdf?id=Sy2fzU9gl. No effect for **paper** since not applied.')
-    parser.add_argument('--separateLearningRate', type=int, default=0, help='This applies to separate learning rates between NN parameters and the parameters for the variances. Applies only if en- or decoding variance is modeled as parameter. No effect for **paper** since not applied.')
-    parser.add_argument('--redDescription', type=int, default=0, help='Only relevant for reverse var. approach. This removes 6 DOFs from x to implicitly remove the rigid body motion. No effect for **paper** since not applied.')
+    parser.add_argument('--stepSched', type=int, default=1, help='Use step scheduler module druing optimization. No effect for PCVs since not applied.')
+    parser.add_argument('--betaVAE', type=float, default=1., help='Beta value for enforcing beta * KL(q(z|x) || p(z)). See https://openreview.net/pdf?id=Sy2fzU9gl. No effect for PCVs since not applied.')
+    parser.add_argument('--separateLearningRate', type=int, default=0, help='This applies to separate learning rates between NN parameters and the parameters for the variances. Applies only if en- or decoding variance is modeled as parameter. No effect for PCVs since not applied.')
+    parser.add_argument('--redDescription', type=int, default=0, help='Only relevant for reverse var. approach. This removes 6 DOFs from x to implicitly remove the rigid body motion. No effect for PCVs since not applied.')
 
     return check_args(parser.parse_args())
 
