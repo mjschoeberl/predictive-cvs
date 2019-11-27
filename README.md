@@ -65,22 +65,23 @@ For each <img src="http://latex.codecogs.com/svg.latex?\boldsymbol{\theta}_i" bo
 
 Please consider to cite the following work:
 ```latex
-@article{schoeberl2018,
-title = "Predictive Collective Variable Discovery with Deep Bayesian Models",
-journal = "Journal of Chemical Physics",
-volume = "",
-pages = "",
-year = "",
-issn = "",
-doi = "",
-url = "",
-author = "Markus Sch{\"o}berl and Nicholas Zabaras and Phaedon-Stelios Koutsourelakis"
+@article{schoeberl2019,
+author = {Schöberl,Markus  and Zabaras,Nicholas  and Koutsourelakis,Phaedon-Stelios },
+title = {Predictive collective variable discovery with deep Bayesian models},
+journal = {The Journal of Chemical Physics},
+volume = {150},
+number = {2},
+pages = {024109},
+year = {2019},
+doi = {10.1063/1.5058063},
+URL = {https://doi.org/10.1063/1.5058063},
+eprint = {https://doi.org/10.1063/1.5058063}
 }
 ```
 
 ## Acknowledgments
 
-The code is inspired by the implementation of Kingma and Welling in [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114).
+The code is inspired by the implementation of Kingma and Welling: [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114).
 
 ## Questions
 
