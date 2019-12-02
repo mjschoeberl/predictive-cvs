@@ -1201,11 +1201,11 @@ class VAEpeptide(object):
 
         # Data path
         if self.bClusterND:
-            data_dir = '/afs/crc.nd.edu/user/m/mschoebe/Private/data/data_peptide'
+            data_dir = '---'
         else:
             scwd = os.getcwd()
             data_dir = os.path.join(scwd, 'data_peptide')
-            #data_dir = '/home/schoeberl/projects/2018_01_24_nd/data_peptide'
+            #data_dir = '---'
         self.data_dir = data_dir
 
         # Is using angular data set, add postfix of the data

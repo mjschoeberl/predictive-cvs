@@ -126,8 +126,8 @@ def estimateProperties(samples_name, cluster, datasetN, pathofsamples=None, post
         command += ' --nCores ' + str(nCores)
     else:
         #command += 'pyenv activate work; '
-        command += 'python /home/schoeberl/Dropbox/PhD/projects/2018_01_24_traildata_yinhao_nd/prediction/propteinpropcal/estimate_properties.py'
-        command += ' --referenceDirectory ' + '/home/schoeberl/Dropbox/PhD/projects/2018_01_24_traildata_yinhao_nd/prediction/propteinpropcal/'
+        command += 'python /home/schoeberl/predictive_cvs/prediction/propteinpropcal/estimate_properties.py'
+        command += ' --referenceDirectory ' + '/home/schoeberl/predictive_cvs/prediction/propteinpropcal/'
 
     if pathofsamples is not None:
         command += ' --predFilePath ' + pathofsamples + '/'
@@ -171,8 +171,8 @@ def estimateProperties(samples_name, cluster, datasetN, pathofsamples=None, post
         command += ' --nCores ' + str(nCores)
     else:
         #command += 'pyenv activate work; '
-        command += 'python /home/schoeberl/Dropbox/PhD/projects/2018_01_24_traildata_yinhao_nd/prediction/propteinpropcal/estimate_properties_compare.py'
-        command += ' --referenceDirectory ' + '/home/schoeberl/Dropbox/PhD/projects/2018_01_24_traildata_yinhao_nd/prediction/propteinpropcal/'
+        command += 'python /home/schoeberl/predictive_cvs/prediction/propteinpropcal/estimate_properties_compare.py'
+        command += ' --referenceDirectory ' + '/home/schoeberl/predictive_cvs/prediction/propteinpropcal/'
 
     if pathofsamples is not None:
         command += ' --predFilePath ' + pathofsamples + '/'
