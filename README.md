@@ -2,7 +2,6 @@
 
 [Markus Schöberl](https://github.com/mjschoeberl), [Nicholas Zabaras](https://www.zabaras.com), [Phaedon-Stelios Koutsourelakis](http://www.contmech.mw.tum.de)
 
-<div class="Sirv" data-src="https://icircong.sirv.com/schoeberl_et_al_ala2_data_driven_sparse_ml/schoeberl_et_al_ala2_data_driven_sparse_ml.spin"></div>
 <img src="https://icircong.sirv.com/schoeberl_et_al_ala2_data_driven_sparse_ml/schoeberl_et_al_ala2_data_driven_sparse_ml.spin?image=72&gif.lossy=5&w=650&h=272" width="650" height="272" alt="" />
 
 Python/PyTorch implementation of the discovery of collective variables (CV) in atomistic systems.
